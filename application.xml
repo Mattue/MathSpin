@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="MathSpin" package="com.MathSpin.re" version="1.0.0" company="IMIT" />
+	
+	<!-- output -->
+	<app main="Main" file="Close2" path="bin" preloader = "Preloader"/>
+	
+	<window background="#000000" fps="60" />
+	<window width="1280" height="720" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/img" rename="img" />
+	<assets path="assets/words" rename="words" />
+
+	<certificate path="YOUR_RELEASE_KEY.keystore" alias="YOUR_ALIAS" password="123456" if="android" unless="debug"/>
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+
+</project>
